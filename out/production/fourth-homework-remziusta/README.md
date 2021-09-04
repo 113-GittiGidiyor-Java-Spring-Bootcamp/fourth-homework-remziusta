@@ -6,11 +6,9 @@
 |:-------:	|:---------------------------------------:	|:---------------------------------------------------------------------------------------------:|:---------------------------------------------------------:	|
 |   GET   	|               /instructor               	|                                            EMPTY                                            	|                    List all instructor                    	|
 |   GET   	|            /instructor/{:id}            	|                                            EMPTY                                            	|                      Get a instructor                     	|
-|   POST  	|               /instructor               	|{ name:":name", address:"address", phoneNumber:":phoneNumber", salary:":salary", type:":type"} |                      Add a instructor                     	|
-|   POST  	|  /instructor/{:instructorId}/{:courseId}  |                                            EMPTY      	                                    |                 Set Instructor Course Relationship               |
-|   PUT   	|               /instructor               	| { id:":id", name:":name", address:"address", phoneNumber:":phoneNumber", salary:":salary", type:":type" }|                    Update a instructor             |
+|   POST  	|               /instructor               	|      { name:":name", address:"address", phoneNumber:":phoneNumber", salary:":salary" }      	|                      Add a instructor                     	|
+|   PUT   	|               /instructor               	| { id:":id", name:":name", address:"address", phoneNumber:":phoneNumber", salary:":salary" } 	|                    Update a instructor                    	|
 |  DELETE 	|            /instructor/{:id}            	|                                            EMPTY                                            	|                    Delete a instructor                    	|
-
 
 # Course Path
 | Request 	|     Route     	|                                 Body                                 	                            |   Description   	|
@@ -28,7 +26,6 @@
 |   GET   	|    /student    	|                              EMPTY                             	            | List all student 	|
 |   GET   	| /student/{:id} 	|                              EMPTY                             	            |   Get a student  	|
 |   POST  	|    /student    	|      { name:":name", gender:":gender", age:":age", address:":address" }      	|   Add a student  	|
-|   POST  	|/student/{:studentId}/{:courseId}|                              EMPTY      	                    | Set Student Course Relationship |
 |   PUT   	|    /student    	| { id:":id" ,name:":name", gender:":gender", age:":age", address:":address" } 	| Update a student 	|
 |  DELETE 	| /student/{:id} 	|                              EMPTY                             	            | Delete a student 	|
 
@@ -39,4 +36,4 @@
 |:-------:	|:--------------------------:|:----------------------------------------------------------------------------:| :----------------------------:|
 |   GET   	|   /logs       	         |                              EMPTY                             	            | List all logs 	            |
 |   GET   	|   /logs/{:status}          |                              EMPTY                             	            | Returns logs with error code 	|
-|   GET   	|   /logs/created/{:date}    |  	                        EMPTY                                           | Returns logs between two dates|
+|   GET   	|   /logs/created/{:date}  |  	                        EMPTY                                           | Returns logs between two dates|
