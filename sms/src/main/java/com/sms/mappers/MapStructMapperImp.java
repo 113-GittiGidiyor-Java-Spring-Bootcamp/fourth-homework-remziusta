@@ -11,6 +11,12 @@ import java.util.Set;
 @Mapper
 @Component
 public class MapStructMapperImp implements MapStructMapper{
+
+    /**
+     * Maps the studentPostDTO object to the Student object
+     * @param studentPostDTO
+     * @return a Student object
+     */
     @Override
     public Student studentPostDtoToStudent(StudentPostDTO studentPostDTO) {
         if(studentPostDTO == null) return null;
@@ -24,6 +30,11 @@ public class MapStructMapperImp implements MapStructMapper{
         return s;
     }
 
+    /**
+     * Maps the Student object to the StudentGetDTO object
+     * @param student
+     * @return a StudentGetDTO object
+     */
     @Override
     public StudentGetDTO studentToStudentGetDto(Student student) {
         if (student == null) return null;
@@ -39,7 +50,11 @@ public class MapStructMapperImp implements MapStructMapper{
     }
 
 
-
+    /**
+     * Maps the Student object to the StudentSlimDTO object
+     * @param student
+     * @return a StudentSlimDTO object
+     */
     @Override
     public StudentSlimDTO studentToStudentSlimDto(Student student) {
         if(student == null) return null;
@@ -51,6 +66,11 @@ public class MapStructMapperImp implements MapStructMapper{
         return studentSlimDTO;
     }
 
+    /**
+     * Maps the Course object to the CourseSlimDTO object
+     * @param course
+     * @return a CourseSlimDTO object
+     */
     @Override
     public CourseSlimDTO courseToCourseSlimDto(Course course) {
         if(course == null) return null;
@@ -61,6 +81,11 @@ public class MapStructMapperImp implements MapStructMapper{
         return courseSlimDTO;
     }
 
+    /**
+     * Maps the CoursePostDTO object to the Course object
+     * @param coursePostDTO
+     * @return a Course object
+     */
     @Override
     public Course coursePostDtoToCourse(CoursePostDTO coursePostDTO) {
         if(coursePostDTO == null) return null;
@@ -72,6 +97,11 @@ public class MapStructMapperImp implements MapStructMapper{
         return course;
     }
 
+    /**
+     * Maps the Course object to the CourseGetDTO object
+     * @param course
+     * @return a CourseGetDTO object
+     */
     @Override
     public CourseGetDTO courseToCourseGetDto(Course course) {
         if(course == null) return null;
@@ -90,9 +120,9 @@ public class MapStructMapperImp implements MapStructMapper{
     }
 
     /**
-     *
-     * @param instructorPostDTO 's type is InstructorDTO
-     * @return Maps the instructorPostDTO object to the Instructor object
+     * Maps the instructorPostDTO object to the Instructor object
+     * @param instructorPostDTO
+     * @return a Instructor object
      */
     @Override
     public Instructor instructorPostDtoToInstructor(InstructorPostDTO instructorPostDTO) {
@@ -113,9 +143,9 @@ public class MapStructMapperImp implements MapStructMapper{
     }
 
     /**
-     *
+     * Maps the Instructor object to the InstructorGetDTO object
      * @param instructor 's type is Instructor
-     * @return Maps the Instructor object to the InstructorGetDTO object
+     * @return a InstructorGetDTO object
      */
     @Override
     public InstructorGetDTO instructorToInstructorGetDto(Instructor instructor) {
@@ -133,6 +163,11 @@ public class MapStructMapperImp implements MapStructMapper{
         return instructorGetDTO;
     }
 
+    /**
+     * Maps the Course's Set object to the CourseSlimDTO's Set object
+     * @param courses
+     * @return a CourseSlimDTO Set object
+     */
     private Set<CourseSlimDTO> studentSetToStudentGetDtoSet(Set<Course> courses) {
         if(courses == null) return null;
 
@@ -143,6 +178,11 @@ public class MapStructMapperImp implements MapStructMapper{
         return courseSlimSet;
     }
 
+    /**
+     * Maps the Student's Set object to the StudentSlimDTO's Set object
+     * @param students
+     * @return a StudentSlimDTO Set object
+     */
     private Set<StudentSlimDTO> courseSetToCourseGetDtoSet(Set<Student> students){
         if (students == null) return null;
 

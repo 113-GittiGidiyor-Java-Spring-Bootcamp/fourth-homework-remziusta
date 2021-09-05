@@ -41,6 +41,10 @@ public class ValidatorUtil {
             throw new InstructorIsAlreadyExistException(ErrorMessageConstants.INSTRUCTOR_AVAILABLE);
     }
 
+    /**
+     * Throws an error based on the number of students in the course
+     * @param count
+     */
     public static void coursesStudentSizeControl(int count){
         if (count > 20)
             throw new StudentNumberForOneCourseExcededException(ErrorMessageConstants.COURSE_MAX_STUDENT);

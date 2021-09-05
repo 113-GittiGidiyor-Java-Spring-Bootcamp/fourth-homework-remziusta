@@ -78,6 +78,12 @@ public class InstructorController {
         return new ResponseEntity<>(name + " is deleted", HttpStatus.OK);
     }
 
+    /**
+     * That method adds instructor in course.
+     * @param instructorId
+     * @param courseId
+     * @return the instructor found in the database
+     */
     @PostMapping("/{instructorId}/{courseId}")
     public ResponseEntity<List<InstructorGetDTO>> addInstructorCourseRelationship(@PathVariable Long instructorId, @PathVariable Long courseId){
         return new ResponseEntity<>(instructorService.setInstructorCourseRelationship(instructorId,courseId).get(),HttpStatus.OK);

@@ -80,6 +80,12 @@ public class StudentController {
         return new ResponseEntity<>(name + " is deleted", HttpStatus.OK);
     }
 
+    /**
+     * That method adds student in course.
+     * @param studentId
+     * @param courseId
+     * @return the students found in the database
+     */
     @PostMapping("/{studentId}/{courseId}")
     public ResponseEntity<List<StudentGetDTO>> addStudentCourseRelationship(@PathVariable Long studentId, @PathVariable Long courseId){
         return new ResponseEntity<>(studentService.setStudentCourseRelationship(studentId,courseId).get(),HttpStatus.OK);
